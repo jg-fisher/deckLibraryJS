@@ -11,11 +11,10 @@ module.exports = class Deck {
 	generate_deck () {
 
 		// creates card object
-		let card = (suit, value) => {
+		let card = (name, suit, value) => {
+			this.name = value + ' of ' + suit
 			this.suit = suit
 			this.value = value
-
-			return {suit: this.suit, value: this.value}	
 		}
 
 		let values = ['2', '3','4','5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
