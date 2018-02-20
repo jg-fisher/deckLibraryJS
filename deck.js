@@ -60,7 +60,3 @@ module.exports = class Deck {
 		return dealt_card
 	}
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 697befd5adda35cf1389f88ec087584d6c12030c
