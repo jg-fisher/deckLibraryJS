@@ -59,7 +59,6 @@ module.exports = class Deck {
 		this.dealt_cards.push(dealt_card)
 		return dealt_card
 	}
-<<<<<<< HEAD
 
 	replace () {
 		this.deck.unshift(this.dealt_cards.shift())
@@ -68,6 +67,4 @@ module.exports = class Deck {
 	clear_deck () {
 		this.deck = []
 	}
-=======
->>>>>>> e5d87c6750e7ddddd80e18f94234d6fe09fa456d
 }
