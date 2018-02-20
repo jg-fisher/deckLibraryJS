@@ -1,22 +1,26 @@
 # deckLibrary
 JS library for a deck of cards.
 
+Import library
+
+    const Deck = require('./deck.js')
+    
 Initialize the Deck object.
 
-    let deck = new Deck()
+    let Deck = new deck()
 
 Generate the deck of cards.
 
-    deck.generate_deck()
+    Deck.generate_deck()
 
 Print the array of card objects in the deck.
 
-    deck.print_deck()
+    Deck.print_deck()
     
 Shuffle the deck randomly.
 
-    deck.shuffle()
+    Deck.shuffle()
 
 Deal a card - returns card object.
 
-    deck.deal()
+    Deck.deal()
