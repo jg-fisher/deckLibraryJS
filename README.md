@@ -1,7 +1,7 @@
 # deckLibrary
 JS library for a deck of cards.
 
-Import library
+Import library.
 
     const deck = require('./deck.js')
     
@@ -28,3 +28,8 @@ Deal a card - returns card object.
 Put most recently dealt card back on top of deck.
 
     Deck.replace()
+
+Remove the current deck.
+
+    Deck.clear_deck()
+    
