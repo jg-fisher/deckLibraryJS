@@ -11,10 +11,12 @@ module.exports = class Deck {
 	generate_deck () {
 
 		// creates card object
-		let card = (name, suit, value) => {
+		let card = (suit, value) => {
 			this.name = value + ' of ' + suit
 			this.suit = suit
 			this.value = value
+
+			return {name:this.name, suit:this.suit, value:this.value}
 		}
 
 		let values = ['2', '3','4','5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -33,8 +35,8 @@ module.exports = class Deck {
 			console.log('Deck has not been generated. Call generate_deck() on deck object before continuing.')
 		}
 		else {
-			for ( let c = 0; c < deck.deck.length; c++ ) {
-	       			console.log(deck.deck[c])
+			for ( let c = 0; c < this.deck.length; c++ ) {
+	       			console.log(this.deck[c])
 			}
 		}
 	}
