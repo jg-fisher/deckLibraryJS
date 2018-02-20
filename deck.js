@@ -1,8 +1,8 @@
 // deck of cards library
 
 // deck class for shuffling, dealing
-class Deck {
-	constructor(deck) {
+module.exports = class Deck {
+	constructor() {
 		this.deck = []
 		this.dealt_cards = []
 	}
@@ -56,9 +56,7 @@ class Deck {
 	deal () {
 		let dealt_card = this.deck.shift()
 		this.dealt_cards.push(dealt_card)
+		return dealt_card
 	}
 }
 
-let deck = new Deck()
-deck.generate_deck()
-deck.print_deck()
