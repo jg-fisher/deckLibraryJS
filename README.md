@@ -24,3 +24,7 @@ Shuffle the deck randomly.
 Deal a card - returns card object.
 
     Deck.deal()
+
+Put most recently dealt card back on top of deck.
+
+    Deck.replace()
