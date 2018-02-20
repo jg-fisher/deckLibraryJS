@@ -1,4 +1,4 @@
-# deckLibrary
+# deckLibraryJS
 JS library for a deck of cards.
 
 Import library.
