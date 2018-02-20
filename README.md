@@ -3,7 +3,7 @@ JS library for a deck of cards.
 
 Import library
 
-    const Deck = require('./deck.js')
+    const deck = require('./deck.js')
     
 Initialize the Deck object.
 
