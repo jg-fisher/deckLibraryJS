@@ -54,12 +54,19 @@ module.exports = class Deck {
   		}
 	}
 
-	// deal out a card
-	deal () {
-		let dealt_card = this.deck.shift()
-		this.dealt_cards.push(dealt_card)
-		return dealt_card
-	}
+	// deal a number cards
+	deal (num_cards) {
+
+                let cards = []
+
+                for ( let c = 0; c < num_cards; c++ ) {
+                        let dealt_card = this.deck.shift()
+                        cards.push(dealt_card)
+                        this.dealt_cards.push(dealt_card)
+                }
+
+                return cards
+        }
 
 	replace () {
 		this.deck.unshift(this.dealt_cards.shift())
