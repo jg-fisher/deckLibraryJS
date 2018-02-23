@@ -31,7 +31,7 @@ module.exports = class Deck {
 
 	// prints the deck of card objects
 	print_deck () {
-		if (this.deck.length == 0) {
+		if (this.deck.length === 0) {
 			console.log('Deck has not been generated. Call generate_deck() on deck object before continuing.')
 		}
 		else {
