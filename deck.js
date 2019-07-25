@@ -10,14 +10,12 @@ module.exports = class Deck {
 	// generates a deck of cards
 	generate_deck () {
 
-		// creates card object
+		// creates card generator function
 		let card = (suit, value) => {
-			this.name = value + ' of ' + suit
-			this.suit = suit
-			this.value = value
-
-			return {name:this.name, suit:this.suit, value:this.value}
-		}
+            		let name = value + ' of ' + suit;
+			//returns key and values into each instance of the this.deck array
+            		return {'name': name, 'suit': suit, 'value':value}
+       	 	}
 
 		let values = ['2', '3','4','5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 		let suits = ['Clubs', 'Diamonds', 'Spades', 'Hearts']
@@ -43,15 +41,15 @@ module.exports = class Deck {
 
 	// shuffle the deck
 	shuffle () {
-  		let currentIndex = this.deck.length, temp_val, rand_ind;
-
-  		while (0 !== currentIndex) {
-  		  rand_ind = Math.floor(Math.random() * currentIndex);
-  		  currentIndex -= 1;
-  		  temp_val = this.deck[currentIndex];
-  		  this.deck[currentIndex] = this.deck[rand_ind];
-  		  this.deck[rand_ind] = temp_val;
-  		}
+  		for( let c = this.deck.length -1; c >= 0; c--){
+            		let tempval = this.deck[c];
+            		let randomindex = Math.floor(Math.random() * this.deck.length);
+			
+			//ensures that the randome index isn't the same as the current index. It runs the function again if this returns as true
+            			while(randomindex == c){ randomindex = Math.floor(Math.random() * this.deck.length)}
+            		this.deck[c] = this.deck[randomindex];
+            		this.deck[randomindex] = tempval;
+        	}
 	}
 
 	// deal a number cards
